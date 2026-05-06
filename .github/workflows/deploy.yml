@@ -32,11 +32,16 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Prefer a personal access token (PAT) stored in repo secret `GH_PAGES_PAT`.
+          # Create a PAT with `repo` (or `public_repo` for public repos) and `workflow` scopes
+          # and add it to Settings → Secrets → Actions as `GH_PAGES_PAT`.
+          github_token: ${{ secrets.GH_PAGES_PAT }}
           publish_dir: ./dist
       - name: Ensure Pages is published from gh-pages
         uses: actions/github-script@v6
         with:
+          # Use the same PAT for API calls that require elevated privileges.
+          github-token: ${{ secrets.GH_PAGES_PAT }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
