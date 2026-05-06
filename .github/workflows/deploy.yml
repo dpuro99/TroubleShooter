@@ -7,7 +7,6 @@ on:
 permissions:
   contents: write
   pages: write
-  administration: write
   id-token: write
 
 jobs:
