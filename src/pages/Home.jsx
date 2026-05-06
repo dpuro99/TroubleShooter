@@ -1,12 +1,12 @@
-import NavBar from '@/components/troubleshooter/NavBar';
-import HeroSection from '@/components/troubleshooter/HeroSection';
-import ProblemSection from '@/components/troubleshooter/ProblemSection';
-import SolutionSection from '@/components/troubleshooter/SolutionSection';
-import HowItWorksSection from '@/components/troubleshooter/HowItWorksSection';
-import HardwareSection from '@/components/troubleshooter/HardwareSection';
-import FutureSection from '@/components/troubleshooter/FutureSection';
-import MarketSection from '@/components/troubleshooter/MarketSection';
-import FooterSection from '@/components/troubleshooter/FooterSection';
+import NavBar from '@/components/troublershooter/NavBar';
+import HeroSection from '@/components/troublershooter/HeroSection';
+import ProblemSection from '@/components/troublershooter/ProblemSection';
+import SolutionSection from '@/components/troublershooter/SolutionSection';
+import HowItWorksSection from '@/components/troublershooter/HowItWorksSection';
+import HardwareSection from '@/components/troublershooter/HardwareSection';
+import FutureSection from '@/components/troublershooter/FutureSection';
+import MarketSection from '@/components/troublershooter/MarketSection';
+import FooterSection from '@/components/troublershooter/FooterSection';
 
 export default function Home() {
   return (

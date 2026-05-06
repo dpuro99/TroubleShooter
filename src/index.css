@@ -39,7 +39,8 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    /* Removed `outline-ring/50` from @apply — some PostCSS versions error on the slash token. */
+    @apply border-border;
   }
 
   body {
