@@ -34,3 +34,14 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+      - name: Ensure Pages is published from gh-pages
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            await github.rest.repos.createPagesSite({
+              owner,
+              repo,
+              source: { branch: 'gh-pages', path: '/' }
+            });
