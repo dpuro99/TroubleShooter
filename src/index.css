@@ -39,8 +39,8 @@
 
 @layer base {
   * {
-    /* Removed `outline-ring/50` from @apply — some PostCSS versions error on the slash token. */
-    @apply border-border;
+    /* Fallback to explicit border so Tailwind `border-border` resolve isn't required during build */
+    border: 1px solid hsl(var(--border));
   }
 
   body {
